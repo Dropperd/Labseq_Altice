@@ -9,6 +9,8 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+import java.math.BigInteger;
+
 @Path("/labseq")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -27,8 +29,8 @@ public class LabseqResource {
                     .build();
         }
 
-        long result = service.labseq(n);
-        return Response.ok(result).build();
+        BigInteger result = service.labseq(n);
+        return Response.ok(result.toString()).build();
     }
 
 
