@@ -1,0 +1,17 @@
+<div style="padding: 20px; max-width: 400px; margin: 0 auto;">
+  <div>
+    <label>n: </label>
+    <input type="number" [(ngModel)]="n" min="0">
+    <button (click)="calculate()" [disabled]="loading">
+      {{ loading ? 'Calculando...' : 'Calcular' }}
+    </button>
+  </div>
+
+  <div *ngIf="result !== null" style="margin-top: 20px; padding: 10px; background: #e8f5e8;">
+    <strong>Result:</strong> l({{ n }}) = {{ result }}
+  </div>
+
+  <div *ngIf="error" style="margin-top: 20px; padding: 10px; background: #ffeaea; color: red;">
+    {{ error }}
+  </div>
+</div>
