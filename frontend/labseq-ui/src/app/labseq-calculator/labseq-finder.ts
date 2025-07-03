@@ -39,4 +39,16 @@ export class LabseqFinder {
       }
     });
   }
+
+  get resultScientific(): string | null {
+  if (this.result) {
+    
+    const bigIntStr = this.result;
+    const length = bigIntStr.length;
+    const firstDigits = bigIntStr.slice(0, 15);
+
+    return `${firstDigits}e+${length - 15}`;
+  }
+  return null;
+}
 }
