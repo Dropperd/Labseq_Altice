@@ -3,7 +3,7 @@
     <label>n: </label>
     <input type="number" [(ngModel)]="n" min="0">
     <button (click)="calculate()" [disabled]="loading">
-      {{ loading ? 'Calculando...' : 'Calcular' }}
+      {{ loading ? 'Calculating' : 'Calculate' }}
     </button>
   </div>
 

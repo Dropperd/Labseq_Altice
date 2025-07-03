@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class LabseqFinder {
   n: number = 0;
-  result: number | null = null;
+  result: string | null = null;
   loading = false;
   error = '';
 
